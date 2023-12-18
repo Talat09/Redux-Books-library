@@ -10,47 +10,49 @@ const BooksView = () => {
     dispatch(deleteBook(id));
   };
   return (
-    <div className="py-16 my-16">
+    <div className="py-16 my-16 bg-base-200">
       <h2 className="text-4xl md:text-5xl text-center font-semibold uppercase text-[#054A75]">
         ALL Books
       </h2>
-      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center items-center gap-5 my-16 mx-8">
-        {books &&
-          books.map((book, i) => {
-            const { id, title, image, author } = book;
-            return (
-              <div
-                key={i}
-                className="w-80 h-[500px] border border-gray-400 flex flex-col md:flex-col p-6 justify-center items-center  rounded-md "
-              >
-                <img
-                  className="w-full h-[250px] mt-4 rounded-md"
-                  src={image}
-                  alt="book-image"
-                />
-                <div className="p-2">
-                  <h3 className="text-2xl font-semibold mt-4">{title}</h3>
-                  <p className="text-xl">
-                    Author: <span className="font-semibold">{author}</span>
-                  </p>
-                  <div className="flex justify-between">
-                    <Link to="/edit" state={{ id, title, image, author }}>
-                      <button className=" bg-sky-800 px-6 py-2  text-white rounded-md mt-4">
-                        Edit
-                      </button>
-                    </Link>
+      <section className="max-w-[1440px] mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center items-center gap-12 my-16  ">
+          {books &&
+            books.map((book, i) => {
+              const { id, title, image, author } = book;
+              return (
+                <div
+                  className="w-full h-[470px] bg-white shadow-xl  rounded-md p-4 mx-2"
+                  key={i}
+                >
+                  <figure>
+                    <img
+                      className="w-full h-[250px] rounded-md"
+                      src={image}
+                      alt="Shoes"
+                    />
+                  </figure>
+                  <div className="card-body">
+                    <h2 className="card-title">{title}</h2>
+                    <p>Authur:{author}</p>
+                    <div className="card-actions justify-between ">
+                      <Link to="/edit" state={{ id, title, image, author }}>
+                        <button className=" bg-sky-800 px-6 py-2  text-white rounded-md mt-4">
+                          Edit
+                        </button>
+                      </Link>
 
-                    <button
-                      className=" bg-sky-800 px-6 py-2  text-white rounded-md mt-4"
-                      onClick={() => handleDelete(id)}
-                    >
-                      Delete
-                    </button>
+                      <button
+                        className=" bg-sky-800 px-6 py-2  text-white rounded-md mt-4"
+                        onClick={() => handleDelete(id)}
+                      >
+                        Delete
+                      </button>
+                    </div>
                   </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+        </div>
       </section>
     </div>
   );

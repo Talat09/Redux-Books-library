@@ -5,7 +5,8 @@ const initialBooks = {
     {
       id: uuidv4(),
       title: "Interesting Facts For Curious Minds: 1572",
-      image: "https://i.ibb.co/tLVb16n/71hw-UY5-Zmx-L-AC-UL210-SR195-210.jpg",
+      image:
+        "https://i.ibb.co/xmbvjvC/sincerely-media-CXYPfveiuis-unsplash.jpg",
       author: "Jordan Moore",
     },
     {
@@ -16,7 +17,26 @@ const initialBooks = {
     },
     {
       id: uuidv4(),
-      title: "Oath and Honor: A Memoir and a Warning",
+      title: "Oath and Honor: A Memoir and a Warn.",
+      image: "https://i.ibb.co/km7yzzY/71-CX11n-Gh-WL-SY466.jpg",
+      author: "Liz Cheney",
+    },
+    {
+      id: uuidv4(),
+      title: "How to Catch a Dinosaur",
+      image: "https://i.ibb.co/nPjKyWW/91jw-RAg09-EL-SY466.jpg",
+      author: "Adam Wallace",
+    },
+    {
+      id: uuidv4(),
+      title: "Interesting Facts For Curious Minds: 1572",
+      image:
+        "https://i.ibb.co/xmbvjvC/sincerely-media-CXYPfveiuis-unsplash.jpg",
+      author: "Jordan Moore",
+    },
+    {
+      id: uuidv4(),
+      title: "Oath and Honor: A Memoir and a Warn.",
       image: "https://i.ibb.co/km7yzzY/71-CX11n-Gh-WL-SY466.jpg",
       author: "Liz Cheney",
     },
