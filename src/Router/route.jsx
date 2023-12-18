@@ -4,6 +4,7 @@ import Home from "../Components/Home/Home";
 import NotFound from "../NotFound/NotFound";
 import AddBook from "../features/books/AddBook";
 import BooksView from "../features/books/BooksView";
+import EditBook from "../features/books/EditBook";
 
 export const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ export const router = createBrowserRouter([
       {
         path: "/add-book",
         element: <AddBook />,
+      },
+      {
+        path: "/edit",
+        element: <EditBook />,
       },
       {
         path: "*",

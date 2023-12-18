@@ -34,7 +34,7 @@ const BooksView = () => {
                     Author: <span className="font-semibold">{author}</span>
                   </p>
                   <div className="flex justify-between">
-                    <Link to="/edit">
+                    <Link to="/edit" state={{ id, title, image, author }}>
                       <button className=" bg-sky-800 px-6 py-2  text-white rounded-md mt-4">
                         Edit
                       </button>
