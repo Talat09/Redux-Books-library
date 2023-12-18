@@ -9,14 +9,14 @@ const Books = () => {
       <h2 className="text-4xl md:text-5xl text-center font-semibold uppercase text-[#054A75]">
         Books
       </h2>
-      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center items-center gap-5 my-16 mx-8">
+      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center items-center gap-8 my-16 mx-16 px-12">
         {books &&
           books.map((book, i) => {
             const { title, image, author } = book;
             return (
               <div
                 key={i}
-                className="w-80 h-[500px] border border-gray-400 flex flex-col md:flex-col p-6 justify-center items-center bg-gray-100 rounded-md "
+                className="w-[400px] h-[500px] border border-gray-400 flex flex-col md:flex-col p-6 justify-center items-center  rounded-md mx-8"
               >
                 <img
                   className="w-[250px] h-[250px] mt-4 rounded-md"

@@ -31,8 +31,12 @@ export const bookSlice = createSlice({
     addBook: (state, action) => {
       state.books.push(action.payload);
     },
+    deleteBook: (state, action) => {
+      const id = action.payload;
+      state.books = state.books.filter((book) => book.id !== id); //jsob book er id amrder id er sathe match hove nah oi book state.books a rekhe dicchi filter kore
+    },
   },
 });
 
-export const { showBooks, addBook } = bookSlice.actions;
+export const { showBooks, addBook, deleteBook } = bookSlice.actions;
 export default bookSlice.reducer;
